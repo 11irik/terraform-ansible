@@ -1,0 +1,11 @@
+[db]
+gcp1 ansible_host=35.225.88.47
+[backend]
+gcp2 ansible_host=35.184.213.31
+[frontend]
+gcp3 ansible_host=35.184.50.237
+
+[stage:children]
+db
+backend
+frontend

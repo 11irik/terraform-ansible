@@ -1,0 +1,11 @@
+[db]
+gcp1 ansible_host=${vm_ip_1}
+[backend]
+gcp2 ansible_host=${vm_ip_2}
+[frontend]
+gcp3 ansible_host=${vm_ip_3}
+
+[stage:children]
+db
+backend
+frontend
