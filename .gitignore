@@ -7,3 +7,5 @@ terraform/terraform.tfstate
 terraform/terraform.tfstate.backup
 terraform/.terraform/*
 terraform.tfstate
+inventory
+ansible_sshkey.pem

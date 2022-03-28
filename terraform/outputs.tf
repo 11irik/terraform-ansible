@@ -10,5 +10,5 @@ output "ip" {
      vm_ip_3 = google_compute_instance.vm_instance_3.network_interface.0.access_config.0.nat_ip
     }
   )
-  filename = "inventory"
+  filename = "./../inventory"
 }
