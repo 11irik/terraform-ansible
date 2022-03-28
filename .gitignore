@@ -5,5 +5,5 @@ terraform/.terraform.lock.hcl
 terraform/inventory
 terraform/terraform.tfstate
 terraform/terraform.tfstate.backup
-terraform/.terraform/providers/registry.terraform.io/hashicorp/google/4.15.0/darwin_arm64/terraform-provider-google_v4.15.0_x5
-terraform/.terraform/providers/registry.terraform.io/hashicorp/local/2.2.2/darwin_arm64/terraform-provider-local_v2.2.2_x5
+terraform/.terraform/*
+terraform.tfstate
