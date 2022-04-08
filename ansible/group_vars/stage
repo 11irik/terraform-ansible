@@ -1,2 +1,2 @@
 ansible_user            : lykashin_kirill_gmail_com
-ansible_ssh_private_key : ./../sshkey.pem
+ansible_ssh_private_key : ./../ansible_sshkey.pem
