@@ -119,6 +119,29 @@ resource "google_compute_instance" "vm_instance_3" {
   }
 }
 
+resource "google_compute_instance" "bastion" {
+  name         = "terraform-bastion"
+  machine_type = "f1-micro"
+  tags         = ["dev", "http-server"]
+
+  metadata = {
+    ssh-keys = "${var.ansible_user}:${tls_private_key.ansible_sshkey.public_key_openssh}"
+  }
+
+  boot_disk {
+    initialize_params {
+      image = data.google_compute_image.gcp_image.self_link
+    }
+  }
+
+  network_interface {
+    network    = google_compute_network.vpc_network.id
+    subnetwork = google_compute_subnetwork.main_subnet.id
+    access_config {
+    }
+  }
+}
+
 resource "google_compute_instance_group" "servers" {
   name        = "terraform-servers"
 
